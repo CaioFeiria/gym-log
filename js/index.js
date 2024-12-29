@@ -1,4 +1,5 @@
-const exList = document.getElementById("exList");
+const exSelect = document.getElementById("exSelect");
+const exTable = document.getElementById("exTable");
 const checkView = document.getElementById("checkView");
 const formExericio = document.querySelector("#form_exercise");
 const nomeTreino = document.getElementById("titulo_treino");
@@ -10,6 +11,7 @@ let idObject = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
     formExericio.classList.add("viewOrNO");
+    buildWorkoutsView();
 });
 
 checkView.addEventListener("click", () => {
@@ -61,8 +63,8 @@ function addLocalStorage(list, object){
     exists.push(object);
     localStorage.setItem(list.listName, JSON.stringify(exists));
 
-    buildWorkoutsView(list);
-}
+    buildWorkoutsView();
+};
 
 function buildWorkoutsView(){
     const keys = [];
@@ -73,8 +75,6 @@ function buildWorkoutsView(){
         const optionExList = document.createElement("option");
         optionExList.setAttribute("value", i);
         optionExList.textContent = key;
-        exList.appendChild(optionExList);
+        exSelect.appendChild(optionExList);
     }
-
-    console.log(keys)
 }

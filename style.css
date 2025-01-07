@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container-form{
+  background-color: #d4d4d4;
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.noView{
+  display: none;
+}

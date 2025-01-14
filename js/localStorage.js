@@ -9,6 +9,6 @@ export function getLocalStorage(key){
 }
 
 export function loadLocalStorage(){
-  let ls = localStorage.key ? localStorage.key : [];
-  return ls;
+  return localStorage.key ? localStorage.key : [];
 }
+

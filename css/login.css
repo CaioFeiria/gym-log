@@ -1,0 +1,78 @@
+:root{
+  --color-primary: #F7CC07;
+  --color-dark: #333;
+  --color-light: #f5f5f5;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  background-color: var(--color-dark) !important;
+}
+
+.container{
+  top: 8rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem 0 3rem;
+}
+
+.logo{
+  padding: 0 2rem 0 2rem;
+  width: 27rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.divForm{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--color-dark);
+  padding: 20px;
+  padding-top: 0px;
+  border-radius: 50px;
+}
+
+.input{
+  margin-bottom: 2rem;
+  padding: 0.7rem;
+  font-size: 1.7rem;
+  border: none;
+  border-bottom: 1px solid var(--color-primary);
+  color: var(--color-light);
+  background-color: transparent;
+  outline: none;
+}
+
+.button{
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  padding: 1rem;
+  width: 11rem;
+  color: var(--color-light);
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  border-radius: 15px;
+}
+
+.button:hover{
+  background-color: var(--color-light);
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(12px);
+  }
+}

@@ -1,5 +1,5 @@
 import { addSessionStorage } from "./sessionStorage.js";
-import { navigateToHome, textErrorLogin, validateInputs } from "./utils.js";
+import { navigateToHome, removeTextErrorLogin, textErrorLogin, validateInputs } from "./utils.js";
 
 const inputUser = document.getElementById("inputUser");
 const inputPassword = document.getElementById("inputPassword");
@@ -26,6 +26,7 @@ function validateLogin(json){
     for (let user of array){
       if (user.username == inputUser.value && user.password == inputPassword.value){
         navigateToHome();
+        removeTextErrorLogin();
         addSessionStorage(user.username, user);
         return;
       }

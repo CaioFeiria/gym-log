@@ -7,6 +7,13 @@ export function textErrorLogin(){
   span.textContent = "Usuário ou Senha está inválido!";
 }
 
+export function removeTextErrorLogin(){
+  const existingError = document.querySelector("#textError");
+  if (existingError) {
+    existingError.textContent = "";
+  }
+}
+
 export function validateInputs() {
   const inputs = document.querySelectorAll("input[required]");
 

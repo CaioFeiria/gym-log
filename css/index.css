@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --color-primary: #F7CC07;
+  --color-dark: #333;
+  --color-border: #3333333a;
+  --color-light: #f5f5f5;
+  --color-error: rgb(230, 41, 41);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+.divFundo{
+  position: relative;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30vh;
+  background-image: url(../assets/fundo-carrosel.png);
+  background-size: 100%;
+  background-position: 20%;
+}
+
+.divCarrosel{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-light);
+  border: 1px solid var(--color-border);
+  border-radius: 30px;
+  width: 85%;
+  height: 20vh;
+}
+
+.nameWorkout{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10rem;
+}
+
+.nameWorkout > button{
+  font-size: 3rem;
+  height: 10vh;
+  padding: 0 2rem 0 2rem;
+}
+
+.buttonsWorkout{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.buttonsWorkout > button{
+  border: none;
+  border-radius: 1rem;
+  align-self: center;
+  width: 50%;
+  padding: 0.5rem;
+  background-color: var(--color-primary);
+}
+
+.buttonsWorkout > button:hover{
+  transition: background-color 0.3s;
+  background-color: var(--color-dark);
+}
+
+.divListaTreino{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.divListaTreino > ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.divListaTreino li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--color-light);
+  border: 1px solid var(--color-border);
+  padding: 1.3rem 0.7rem 1.3rem 0.7rem;
+}
+
+.divListaTreino p{
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.divListaTreino span{
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.divListaTreino button{
+  padding: 0.7rem;
+  border-radius: 4rem;
+  border: none;
+  background-color: var(--color-primary);
+}
+
+.divListaTreino button:hover{
+  transition: background-color 0.3s;
+  background-color: var(--color-dark);
+}
+
+.menuFixed{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-light);
+}
+
+.menuFixed button{
+  border: none;
+  color: var(--color-dark);
+  font-weight: 500;
+}
+
+.menuFixed button:active{
+  transform: scale(0.95);
+}
+
+.menuFixed button:hover{
+  cursor: pointer;
+}
+
+.menuFixed p{
+  font-size: 1.3rem;
+}
+
+.ativo{
+  transition: all 0.3s;
+  color: var(--color-primary) !important;
+  display: inline-block;
+  background-color: transparent;
+}
+
+.ativo img{
+  padding: 7px;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  transition: transform 0.3s;
+}
+
+.noView{
+  display: none;
+}
+
+/* ================================ */
+.titleWorkout {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0 20px;
+}
+
+.prev, .next {
+  color: var(--color-primary);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.next:hover {
+  color: var(--color-dark);
+}
+
+.prev:hover {
+  color: var(--color-dark);
+}
+
+.prev:focus {
+  outline: none;
+}
+
+.next:focus {
+  outline: none;
+}

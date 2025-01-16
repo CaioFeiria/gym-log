@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --color-primary: #F7CC07;
+  --color-primary-black: #d2ab00;
+  --color-dark: #333;
+  --color-border: #3333333a;
+  --color-light: #f5f5f5;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+.background{
+  background-image: url(../assets/geometric.png);
+  background-size: 100%;
+  background-repeat: repeat-y;
+  height: 50rem;
+}
+
+.divImg{
+  display: flex;
+  justify-content: center;
+}
+
+.logo{
+  border-radius: 70px;
+  width: 17rem;
+  padding: 40px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--color-light);
+  padding: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top-right-radius: 100px;
+  height: 68vh;
+}
+
+.divList{
+  padding-top: 5rem;
+}
+
+.listOptions{
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+
+.listOptions > li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+  padding: 0.4rem;
+}
+
+.listOptions button{
+  background-color: transparent;
+  border: none;
+  font-size: 2.5rem;
+  padding: 1rem;
+  transition: color 0.2s;
+}
+
+.listOptions button:hover{
+  color: var(--color-primary);
+}
+
+.aboutApp{
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gymlog{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.aboutApp > span {
+  font-size: 1.7rem;
+}
+
+.aboutApp a{
+  font-weight: 500;
+  color: var(--color-primary-black);
+  text-decoration: none;
+  font-size: 1.7rem;
+  transition: color 0.2s;
+}
+
+.aboutApp a:hover{
+
+  color: var(--color-primary);
+}
+
+.version{
+  padding-top: 2rem;
+  font-size: 1.3rem;
+}
+
+.menuFixed{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-light);
+}
+
+.menuFixed button{
+  border: none;
+  color: var(--color-dark);
+  font-weight: 500;
+}
+
+.menuFixed button:active{
+  transform: scale(0.95);
+}
+
+.menuFixed button:hover{
+  cursor: pointer;
+}
+
+.menuFixed p{
+  font-size: 1.3rem;
+}
+
+.ativo{
+  transition: all 0.3s;
+  color: var(--color-primary) !important;
+  display: inline-block;
+  background-color: transparent;
+}
+
+.ativo img{
+  padding: 7px;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  transition: transform 0.3s;
+}

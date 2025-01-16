@@ -1,27 +1,47 @@
-// import { getLocalStorage, addOrUpdateLocalStorage } from "./localStorage";
-// import { createOptionsSelect } from "./elements";
+import { navigateToHome, navigateToUser } from "./utils.js";
 
-const containerList = document.getElementById("containerNewListExercise");
-const inputList = document.getElementById("input-listExercise");
-const containerExercise = document.getElementById("containerExercise");
+const buttonWorkouts = document.getElementById("btnWorkouts");
+const buttonUser = document.getElementById("btnUser");
 
 document.addEventListener("DOMContentLoaded", () => {
-  containerList.classList.add("noView");
-  containerExercise.classList.add("noView");
-  // createOptionsSelect();
+  buttonWorkouts.classList.add("ativo");
+
 });
 
-document.getElementById("btn-openListExercise").addEventListener("click", () => {
-  if (containerList.classList.contains("noView")){
-    containerList.classList.remove("noView");
-  }else
-    containerList.classList.add("noView");
+buttonWorkouts.addEventListener("click", () => {
+  if (!buttonWorkouts.classList.contains("ativo")) {
+    buttonUser.classList.remove("ativo");
+    navigateToHome();
+  }
+  buttonWorkouts.classList.add("ativo");
 });
 
-document.getElementById("btn-newListExercise").addEventListener("click", () => {
-  // validar campo input
-  containerExercise.classList.remove("noView");
-  inputList.setAttribute("disabled", "");
-  inputList.style.cursor = "not-allowed";
-  // mostrar campo de cadastro dos exercicios da lista
+buttonUser.addEventListener("click", () => {
+  if (!buttonUser.classList.contains("ativo")){
+    buttonWorkouts.classList.remove("ativo");
+    navigateToUser();
+  }
+  buttonUser.classList.add("ativo");
 });
+const treinos = ["TREINO A", "TREINO B", "TREINO C", "TREINO D"];
+indiceAtual = 0; // Índice atual do treino visível
+function mudarTreino(direcao) {
+  indiceAtual += direcao; // Atualiza o índice com base na direção (1 ou -1)
+  
+  // Verifica se o índice saiu dos limites e ajusta
+  if (indiceAtual < 0) {
+    indiceAtual = treinos.length - 1; // Volta para o último treino
+  } else if (indiceAtual >= treinos.length) {
+    indiceAtual = 0; // Volta para o primeiro treino
+  }
+
+  // Atualiza o título do treino visível
+  document.getElementById("treino-titulo").textContent = treinos[indiceAtual];
+}
+
+// Associa a função aos botões
+document.querySelector(".prev").addEventListener("click", mudarTreino(-1));
+
+document.querySelector(".next").addEventListener("click", mudarTreino(1));
+
+

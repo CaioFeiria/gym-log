@@ -1,5 +1,15 @@
+import { scanSessionStorage } from "./sessionStorage.js";
+
 export function navigateToHome(){
   window.location.href = "index.html";
+}
+
+export function navigateToUser(){
+  window.location.href = "user.html";
+}
+
+export function navigateToLogin(){
+  window.location.href = "login.html";
 }
 
 export function textErrorLogin(){
@@ -30,4 +40,14 @@ export function validateInputs() {
       input.parentNode.appendChild(span);
     }
   });
+}
+
+export function userLogado(){
+  let session = scanSessionStorage();
+  for (let users of session){
+    for (let item of users){
+      const p = document.getElementById("userName");
+      p.textContent = `Olá, ${item.username}`;
+    }
+  }
 }

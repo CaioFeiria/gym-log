@@ -19,78 +19,87 @@ html{
 }
 
 body{
-  background-color: var(--color-dark) !important;
+  background-color: var(--color-light) !important;
 }
 
-.container{
-  top: 8rem;
-  position: relative;
+.background{
+  background-image: url(../assets/geometric.png);
+  background-size: 100%;
+  background-repeat: repeat-y;
+  height: 50rem;
+}
+
+.divImg{
   display: flex;
-  flex-direction: column;
-  padding: 0 3rem 0 3rem;
+  justify-content: center;
 }
 
 .logo{
-  padding: 0 2rem 0 2rem;
-  width: 27rem;
-  animation: float 3s ease-in-out infinite;
+  border-radius: 70px;
+  width: 17rem;
+  padding: 40px;
 }
 
 .divForm{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
-  background-color: var(--color-dark);
+  background-color: var(--color-light);
   padding: 20px;
   padding-top: 0px;
-  border-radius: 50px;
+  border-top-left-radius: 100px;
+  height: 68vh;
+}
+
+h2{
+  color: var(--color-dark);
+  font-size: 5rem;
+  font-weight: 500;
+  padding: 5rem 0 4rem;
 }
 
 .divUser{
-  padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.7rem;
 }
 
 .divPass{
+  display: flex;
+  flex-direction: column;
   padding-bottom: 2rem;
 }
 
 .input{
   margin-bottom: 0.7rem;
   padding: 0.7rem;
-  font-size: 1.7rem;
+  font-size: 2rem;
   border: none;
-  border-bottom: 1px solid var(--color-primary);
-  color: var(--color-light);
+  border-bottom: 2px solid var(--color-primary);
+  color: var(--color-dark);
   background-color: transparent;
   outline: none;
 }
 
 .textError{
   color: var(--color-error);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .button{
   margin-top: 1rem;
-  font-size: 1.8rem;
-  padding: 1rem;
+  font-size: 2rem;
+  padding: 1.3rem;
   width: 11rem;
   color: var(--color-light);
-  background-color: transparent;
+  background-color: var(--color-primary);
   border: 1px solid var(--color-primary);
   border-radius: 15px;
 }
 
 .button:hover{
-  color: var(--color-dark);
-  background-color: var(--color-primary);
-}
-
-@keyframes float {
-  0%, 100% {
-      transform: translateY(0);
-  }
-  50% {
-      transform: translateY(12px);
-  }
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  background-color: transparent;
 }
